@@ -8,14 +8,10 @@ html {
   font-size: 62.5%;
 }
 body {
-  height: 110vh;
   font-size: $small-text;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   background: $background-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 h2 {
   font-size: $big-text;
