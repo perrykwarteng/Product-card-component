@@ -1,10 +1,83 @@
 $primary-color: hsl(158, 36%, 37%);
+$active: hsl(155, 47%, 21%);
 $background-color: hsl(30, 38%, 92%);
 $big-text-color: hsl(212, 21%, 14%);
 $small-text-color: hsl(228, 12%, 48%);
 $White: hsl(0, 0%, 100%);
 $small-text: 1.4rem;
-$big-text: 3.5rem;
+$big-text: 3rem;
 $border-raduis: 0.8rem;
 
 @import "global";
+
+.product-card {
+  width: 85%;
+  background: $White;
+  border-radius: $border-raduis;
+
+  .product-image {
+    width: 100%;
+    img {
+      width: 100%;
+      border-top-left-radius: $border-raduis;
+      border-top-right-radius: $border-raduis;
+    }
+  }
+
+  .product-details {
+    padding: 2rem;
+
+    .type {
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      color: $small-text-color;
+    }
+
+    .name {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      margin: 1rem 0 1.5rem 0.3rem;
+    }
+
+    .desc {
+      color: $small-text-color;
+    }
+
+    .price {
+      margin: 2rem 0;
+      position: relative;
+
+      h2 {
+        color: $primary-color;
+        font-family: "Fraunces", serif;
+      }
+      p {
+        position: absolute;
+        top: 25%;
+        right: 25%;
+        color: $small-text-color;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 4rem;
+      background: $primary-color;
+      outline: none;
+      border: none;
+      border-radius: $border-raduis;
+      color: $White;
+      font-weight: 700;
+      transition: background 0.4s ease;
+
+      img {
+        margin-right: 0.8rem;
+        position: relative;
+        top: 5%;
+      }
+      &:hover {
+        background: $active;
+      }
+    }
+  }
+}
